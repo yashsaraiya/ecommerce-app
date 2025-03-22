@@ -1,0 +1,195 @@
+.Home{
+    display: flex;
+    align-items: flex-start;
+    
+}
+.productcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px;
+    min-height: 100vh;
+    overflow-y: auto;
+    background-color: rgb(255, 255, 255);
+    gap: 40px;
+    align-items: stretch;
+    transition: margin-left 0.4s ease-in-out; /* Smooth transition */
+}
+.filetersummery{
+    padding: 20px;
+    background-color: rgb(34, 34, 34);
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    width: 300px; /* Fixed width for a consistent layout */
+    min-height: 100vh; /* Ensures full height */
+}
+.filter {
+ padding: 20px;
+    background-color: rgb(34, 34, 34);
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 4px 8px rgba(65, 2, 2, 0.959);
+    width: 250px;
+    min-height: 100vh; 
+    margin:5PX;
+}
+.filter>span{
+    padding-top: 20px;
+}
+.title{
+    font-size: 30px;
+}
+
+.productcontainer::-webkit-scrollbar {
+    width: 8px;
+}
+.productcontainer::-webkit-scrollbar-thumb {
+    background: #888; /* Scrollbar thumb color */
+    border-radius: 10px;
+}
+.productcontainer::-webkit-scrollbar-track {
+    background: #fffdfd; /* Scrollbar track color */
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 300px; /* Set a fixed width */
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevents content from overflowing */
+    transition: transform 0.2s ease-in-out;
+}
+.card:hover {
+    transform: translateY(-5px); /* Adds a hover effect */
+}
+
+/* Image inside the card */
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Prevents image stretching */
+}
+
+/* Card Content */
+.card-content {
+    padding: 15px;
+    text-align: center;
+}
+.card-content h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.card-content p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Price & Buttons */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid ;
+}
+.card-footer button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.card-footer button.remove {
+    background-color: red;
+}
+
+/* Shopping Cart Item */
+.cartItem {
+    width: 500px; /* Reduce width for better alignment */
+    background: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    transition: transform 0.2s ease-in-out;
+    margin-left: -300px
+}
+.cartItem:hover {
+    transform: scale(1.02);
+}
+
+/* Cart Item Image */
+.cartItem img {
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Responsive Design */
+
+.cart-dropdown {
+    position: absolute !important;
+    right: 0;
+    top: 100%;
+    width: 280px; /* Adjust width */
+    max-height: 300px;
+    background: white !important; 
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(255, 8, 8, 0.959);
+    overflow-y: auto;
+    z-index: 1050; 
+    padding: 10px;
+}
+.price{
+    display: "block";
+    margin-top: "5px";
+    font-size: "14px"
+    }
+
+    @media (max-width: 771px) {
+        
+        .filter {
+            width: 30%;
+            margin: 5px;
+            box-shadow: 0px 5px 5px #520303
+        }
+        .filter > span {
+          font-size: 10px;
+        padding-top: 8px;
+        width: 100px;
+        text-align: left;
+        display: block;
+        }
+        
+        .productcontainer {
+            width: 60%;
+            padding: 0;
+        }
+
+        .cartItem {
+            width: 50%;
+        }
+        .filter button {
+            
+            font-size: 10px;
+            margin-right: 20px;
+        }
+        .search input {
+            width: 100%; /* Full width for smaller screens */
+            display: none;
+          }
+          .cart-dropdown {
+            width: 100% !important; /* Adjust dropdown width */
+          }
+    }
